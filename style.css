@@ -176,10 +176,8 @@ main {
 @media screen and (max-width: 1000px) {
   .search-input {
     float: none;
-    max-width: none;
   }
   .search-form {
-    max-width: none;
     width: 80%;
   }
 

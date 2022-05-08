@@ -63,7 +63,7 @@ nav {
   padding: 0.5rem 1rem;
   background-color: coral;
   color: white;
-  border-radius: 0.2rem;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ h2 {
 .more-btn {
   border: none;
   padding: 1rem 2rem;
-  border-radius: 0.2rem;
+  border-radius: 8px;
   font-family: inherit;
   margin-top: 2rem;
   cursor: pointer;

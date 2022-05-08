@@ -12,6 +12,7 @@ body {
   align-items: center;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-color: white;
 }
 
 nav {
@@ -23,9 +24,10 @@ nav {
   left: 0;
   right: 0;
   min-height: 4rem;
-  width: 90%;
+  width: 100%;
   margin: auto;
   background-color: white;
+  padding: 0rem 1rem;
 }
 
 #search {
@@ -82,7 +84,6 @@ h2 {
 
 .search-form {
   border: 1px solid gray;
-  width: 50%;
   height: 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -95,7 +96,7 @@ h2 {
   flex: 1;
   font-family: inherit;
   font-size: 1rem;
-  float: none;
+  /* float: none; */
 }
 
 .search-input:focus {
@@ -174,13 +175,6 @@ main {
 }
 
 @media screen and (max-width: 1000px) {
-  .search-input {
-    float: none;
-  }
-  .search-form {
-    width: 80%;
-  }
-
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;

@@ -171,7 +171,7 @@ main {
   margin: auto;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 400px) {
   .search-input {
     float: none;
     max-width: none;
@@ -179,6 +179,14 @@ main {
   .search-form {
     max-width: none;
     width: 80%;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    row-gap: 3rem;
+    column-gap: 2rem;
+    margin-top: 2rem;
   }
 }
 

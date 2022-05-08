@@ -67,6 +67,11 @@ nav {
   cursor: pointer;
 }
 
+.sign-up:hover {
+  background-color: gray;
+  color: white;
+}
+
 h2 {
   text-align: center;
   margin: 2rem 0rem;

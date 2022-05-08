@@ -10,6 +10,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 nav {
@@ -171,7 +173,7 @@ main {
   margin: auto;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1000px) {
   .search-input {
     float: none;
     max-width: none;
@@ -182,29 +184,7 @@ main {
   }
 
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    row-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
-    margin-top: 2rem;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .search-input {
-    float: none;
-    max-width: none;
-  }
-  .search-form {
-    max-width: none;
-    width: 80%;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    row-gap: 3rem;
-    column-gap: 2rem;
-    margin-top: 2rem;
   }
 }

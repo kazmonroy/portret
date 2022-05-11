@@ -24,30 +24,27 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo"><a href="index.html">Portret</a></div>
-        <ul class="nav-links">
-          <a href="#">
-            <li>Blog</li>
-          </a>
-          <li><button class="sign-up">Sign up</button></li>
-        </ul>
-      </nav>
+      <div class="logo"><a href="index.html">Portret</a></div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+      </div>
     </header>
 
     <section id="search">
       <h2>Portret</h2>
-
-      <form action="#" class="search-form">
-        <input
-          type="text"
-          class="search-input"
-          placeholder="Search cool pics"
-        />
-        <button class="search-icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
+      <div class="search-form">
+        <form action="#">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search cool pics"
+          />
+          <button class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
     </section>
 
     <main>
@@ -55,6 +52,30 @@
     </main>
 
     <div class="more"><button class="more-btn">More</button></div>
+
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <h3>Github</h3>
+        <h3>LinkedIn</h3>
+        <h3>Instagram</h3>
+      </ul>
+
+      <div class="contact">
+        <p>Stay in touch</p>
+        <button class="sign-up">Contact</button>
+        <!-- <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsum odio
+          error distinctio ipsam maiores.
+        </p> -->
+      </div>
+    </nav>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script src="app.js"></script>
   </body>

@@ -3,6 +3,7 @@ const searchInput = document.querySelector(".search-input");
 const form = document.querySelector(".search-form");
 const gallery = document.querySelector(".gallery");
 const moreBtn = document.querySelector(".more-btn");
+const burger = document.querySelector(".burger");
 
 // Variables
 let searchValue;
@@ -17,6 +18,8 @@ form.addEventListener("submit", () => {
 });
 
 moreBtn.addEventListener("click", loadMore);
+
+burger.addEventListener("click", navToggle);
 
 function updateInput(e) {
   e.preventDefault();
@@ -83,6 +86,23 @@ async function loadMore() {
 function clear() {
   gallery.innerHTML = "";
   searchInput.value = "";
+}
+
+function navToggle(e) {
+  console.log(e);
+  if (!e.target.classList.contains("active")) {
+    e.target.classList.add("active");
+    gsap.to(".line1", 0.5, { rotate: "45", y: 5, background: "black" });
+    gsap.to(".line2", 0.5, { rotate: "-45", y: -2, background: "black" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
+    document.body.classList.add("hide");
+  } else {
+    e.target.classList.remove("active");
+    gsap.to(".line1", 0.5, { rotate: "0", y: 0 });
+    gsap.to(".line2", 0.5, { rotate: "0", y: 0 });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%)" });
+    document.body.classList.remove("hide");
+  }
 }
 
 getPhotos();

@@ -15,46 +15,92 @@ body {
   background-color: white;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-height: 4rem;
-  width: 100%;
-  margin: auto;
-  background-color: white;
-  padding: 0rem 1rem;
-}
-
 #search {
   margin-top: 2rem;
-  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+header {
+  position: fixed;
+  height: 50px;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  padding: 0rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.burger > div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.2rem;
+  background-color: black;
+  pointer-events: none;
+}
+
+.logo {
+  flex: 1;
+}
+
 .logo a {
   color: black;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+  background-color: white;
+
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.contact {
+  /* flex-basis: 40rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar > * {
+  font-size: 2.5rem;
 }
 
 .nav-links {
   display: flex;
-  list-style: none;
+  flex-direction: column;
   align-items: center;
+  list-style: none;
+  /* flex-basis: 30rem; */
 }
 
 .nav-links li {
   padding-left: 2rem;
   cursor: pointer;
   color: black;
+  margin-top: 1rem;
 }
 
 .nav-links a,
@@ -62,13 +108,19 @@ nav {
   text-decoration: none;
 }
 
+.hide {
+  overflow: hidden;
+}
+
 .sign-up {
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   background-color: coral;
   color: white;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 2rem;
 }
 
 .sign-up:hover {
@@ -78,25 +130,28 @@ nav {
 
 h2 {
   text-align: center;
-  margin: 2rem 0rem;
+  margin: 3rem 0rem 2rem;
   font-size: 3rem;
 }
 
-.search-form {
+form {
   border: 1px solid gray;
   height: 2.5rem;
+  min-width: 500px;
+  margin: 0rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   border-radius: 0.2rem;
 }
 
 .search-input {
   border: none;
-  padding: 0rem 1rem;
   flex: 1;
   font-family: inherit;
   font-size: 1rem;
-  /* float: none; */
+  margin-left: 1rem;
 }
 
 .search-input:focus {
@@ -174,11 +229,46 @@ main {
   margin: auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
 
-  
+  form {
+    margin-top: 5rem;
+    min-width: 400px;
+  }
+
+  h2 {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .burger {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+  }
+
+  .nav-links {
+    flex-basis: 20rem;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    position: fixed;
+    top: 5px;
+    left: 20px;
+  }
+
+  .contact {
+    flex-basis: 1rem;
+  }
 }

@@ -256,6 +256,10 @@ main {
     opacity: 0;
   }
 
+  .nav-bar > * {
+    font-size: 2rem;
+  }
+
   .nav-bar {
     flex-direction: column;
     justify-content: center;

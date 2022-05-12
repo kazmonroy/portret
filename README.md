@@ -8,10 +8,11 @@ Project found at [Developed By Ed](https://developedbyed.com/p/the-creative-java
 
 ## 🛠️ Built with
 
-- Javascript
-- [Pexels API](http://www.google.fr/ "Named link title")
+- JavaScript
+- [Pexels API](http://www.google.fr/ "Pexels API")
 - [Google Fonts](https://fonts.google.com/specimen/Poppins "Google Fonts")
 - [Font Awesome Icon Library](https://fontawesome.com/ "Font Awesome Icon Library")
+- [GSAP](https://greensock.com/gsap/ "GSAP")
 - VSCode
 - Git and GitHub
 

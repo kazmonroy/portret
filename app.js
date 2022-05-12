@@ -13,7 +13,8 @@ let fetchLink;
 // Event listeners
 searchInput.addEventListener("input", updateInput);
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   searchPhotos(searchValue);
 });
 
@@ -61,10 +62,9 @@ async function getPhotos() {
 }
 
 async function searchPhotos(query) {
+  clear();
   const fetchLink = `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=1`;
   const data = await fetchApi(fetchLink);
-
-  clear();
 
   generateGallery(data);
 }
